@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<div class="flex items-center pa4">
+  {{ range (where .Site.Pages "Type" "post") }}
+      {{ .Render "gallery-item" }}
+  {{ end }}
+  {{ range (where .Site.Pages "Type" "post") }}
+      {{ .Render "gallery-item" }}
+  {{ end }}
+</div>
+
+<!-- <div class="pb4">
+  {{ range .Params.testimonials }}
+    {{ partial "blockquote" . }}
+  {{ end }}
+</div> -->
+
+{{ end }}
